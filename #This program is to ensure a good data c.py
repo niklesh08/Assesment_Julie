@@ -72,6 +72,24 @@ def append_name ():
     entry_quantity.delete(0,'end')
     total_entries +=  1
 
+#delete a row from the list
+def delete_row ():
+    #these are the global variables that are used
+    global customer_details, delete_item, total_entries, name_count
+    #find which row is to be deleted and delete it
+    del customer_details[int(delete_item.get())]
+    total_entries = total_entries - 1
+    delete_item.delete(0,'end')
+    #clear the last item displayed on the GUI
+    Label(main_window, text="       ").grid(column=0,row=name_count+7) 
+    Label(main_window, text="       ").grid(column=1,row=name_count+7)
+    Label(main_window, text="       ").grid(column=2,row=name_count+7)
+    Label(main_window, text="       ").grid(column=3,row=name_count+7)
+    Label(main_window, text="       ").grid(column=4,row=name_count+7)
+    #print all the items in the list
+    print_customer_details()
+
+
 #start the program running
 def main ():
     #create the GUI and start it up
