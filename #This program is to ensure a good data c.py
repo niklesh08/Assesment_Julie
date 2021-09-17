@@ -1,1 +1,3 @@
-#This program is to ensure a good data collection of Julie's Party Hire Store
+##############################################################################
+#This program is to ensure a good data collection of Julie's Party Hire Store#
+##############################################################################
