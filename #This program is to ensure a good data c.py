@@ -89,6 +89,32 @@ def delete_row ():
     #print all the items in the list
     print_customer_details()
 
+#create the buttons and labels
+def setup_buttons():
+    #these are the global variables that are used
+    global customer_details, entry_name,entry_receipt,entry_item,entry_quantity, total_entries, delete_item
+    #create all the empty and default labels, buttons and entry boxes. Put them in the correct grid location
+    Label(main_window, text="Full Name") .grid(column=0,row=0,sticky=E)
+    entry_name = Entry(main_window)
+    entry_name.grid(column=1,row=0)
+    Label(main_window, text="Receipt Number") .grid(column=0,row=1,sticky=E)
+    entry_receipt = Entry(main_window)
+    entry_receipt.grid(column=1,row=1)
+    Button(main_window, text="Quit",command=quit,width = 10) .grid(column=4, row=0,sticky=E)
+    Button(main_window, text="Append Details",command=check_inputs) .grid(column=3,row=1)
+    Button(main_window, text="Print Details",command=print_customer_details,width = 10) .grid(column=4,row=1,sticky=E)
+    Label(main_window, text="Item") .grid(column=0,row=2,sticky=E)
+    entry_item = Entry(main_window)
+    entry_item.grid(column=1,row=2)
+    Label(main_window, text="Number of Item/s") .grid(column=0,row=3,sticky=E)
+    entry_quantity = Entry(main_window)
+    entry_quantity.grid(column=1,row=3)
+    Label(main_window, text="Row #") .grid(column=3,row=2,sticky=E)
+    delete_item = Entry(main_window)
+    delete_item .grid(column=4,row=2)
+    Button(main_window, text="Delete Row",command=delete_row,width = 10) .grid(column=4,row=3,sticky=E)
+    Label(main_window, text="               ") .grid(column=2,row=0)
+
 
 #start the program running
 def main ():
