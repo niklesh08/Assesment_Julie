@@ -52,10 +52,10 @@ def check_inputs ():
     #Check the number of item/s is not blank and between 1 and 500, set error text if blank  
     if (entry_quantity.get().isdigit()) : 
         if  int(entry_quantity.get()) < 1 or  int(entry_quantity.get()) > 500:
-            Label(main_window,fg="red", text="1-500 only") .grid(column=2,row=2)
+            Label(main_window,fg="red", text="1-500 only") .grid(column=2,row=3)
             input_check = 1
     else :
-        Label(main_window,fg="red", text="1-500 only") .grid(column=2,row=2)
+        Label(main_window,fg="red", text="1-500 only") .grid(column=2,row=3)
         input_check = 1      
     if input_check == 0 : append_name()
 
