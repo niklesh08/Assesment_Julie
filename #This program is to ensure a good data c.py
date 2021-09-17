@@ -37,7 +37,27 @@ def check_inputs ():
     Label(main_window, text="               ") .grid(column=2,row=1)
     Label(main_window, text="               ") .grid(column=2,row=2)
     Label(main_window, text="               ") .grid(column=2,row=3)
-    
+    #Check that Full Name is not blank, set error text if blank   
+    if len(entry_leader.get()) == 0 :
+        Label(main_window,fg="red", text="Required") .grid(column=2,row=0)
+        input_check = 1
+    #Check that Receipt Number is not blank, set error text if blank     
+    if len(entry_location.get()) == 0 :
+        Label(main_window,fg="red", text="Required") .grid(column=2,row=1)
+        input_check = 1
+    #Check that Item is not blank, set error text if blank     
+    if len(entry_location.get()) == 0 :
+        Label(main_window,fg="red", text="Required") .grid(column=2,row=2)
+        input_check = 1
+    #Check the number of item/s is not blank and between 1 and 500, set error text if blank  
+    if (entry_campers.get().isdigit()) : 
+        if  int(entry_campers.get()) < 1 or  int(entry_campers.get()) > 500:
+            Label(main_window,fg="red", text="1-500 only") .grid(column=2,row=2)
+            input_check = 1
+    else :
+        Label(main_window,fg="red", text="1-500 only") .grid(column=2,row=2)
+        input_check = 1      
+    if input_check == 0 : append_name()
 
 #start the program running
 def main ():
