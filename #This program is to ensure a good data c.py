@@ -4,3 +4,8 @@
 
 #import tkinter so we can make a GUI
 from tkinter import *
+
+#quit subroutine
+def quit () :
+    main_window.destroy()
+
