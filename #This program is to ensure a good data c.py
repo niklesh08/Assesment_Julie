@@ -19,3 +19,13 @@ def print_customer_details () :
     Label(main_window, font=("Helvetica 10 bold"), text="Receipt Number") .grid(column=1, row=7)
     Label(main_window, font=("Helvetica 10 bold"), text="Item") .grid(column=2, row=7)
     Label(main_window, font=("Helvetica 10 bold"), text="Number of Item/s") .grid(column=3, row=7)
+
+
+#start the program running
+def main ():
+    #create the GUI and start it up
+    main_window =Tk ()
+    setup_buttons ()
+    main_window.mainloop ()
+        
+main ()
