@@ -28,6 +28,16 @@ def print_customer_details () :
         Label(main_window, text=(customer_details[name_count][3])).grid(column=4,row=name_count+8)
         name_count += 1
 
+#Check the inputs are all valid
+def check_inputs ():
+    #these are the global variables that are used
+    global customer_details, entry_name, entry_receipt, entry_item, entry_quantity
+    input_check = 0
+    Label(main_window, text="               ") .grid(column=2,row=0)
+    Label(main_window, text="               ") .grid(column=2,row=1)
+    Label(main_window, text="               ") .grid(column=2,row=2)
+    Label(main_window, text="               ") .grid(column=2,row=3)
+    
 
 #start the program running
 def main ():
