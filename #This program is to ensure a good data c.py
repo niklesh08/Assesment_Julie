@@ -15,10 +15,11 @@ def print_customer_details () :
     global j_names, total_entries, name_count
     name_count=0
     #Create the column headings
-    Label(main_window, font=("Helvetica 10 bold"), text="Full Name") .grid(column=0, row=7)
-    Label(main_window, font=("Helvetica 10 bold"), text="Receipt Number") .grid(column=1, row=7)
-    Label(main_window, font=("Helvetica 10 bold"), text="Item") .grid(column=2, row=7)
-    Label(main_window, font=("Helvetica 10 bold"), text="Number of Item/s") .grid(column=3, row=7)
+    Label(main_window, font=("Helvetica 10 bold"), text="Row") .grid(column=0, row=7)
+    Label(main_window, font=("Helvetica 10 bold"), text="Full Name") .grid(column=1, row=7)
+    Label(main_window, font=("Helvetica 10 bold"), text="Receipt Number") .grid(column=2, row=7)
+    Label(main_window, font=("Helvetica 10 bold"), text="Item") .grid(column=3, row=7)
+    Label(main_window, font=("Helvetica 10 bold"), text="Number of Item/s") .grid(column=4, row=7)
     #add each item in the list onto its own row
     while name_count < total_entries :
         Label(main_window, text=name_count) .grid(column=0, row=name_count+8)
@@ -31,7 +32,7 @@ def print_customer_details () :
 #Check the inputs are all valid
 def check_inputs ():
     #these are the global variables that are used
-    global customer_details, entry_name, entry_receipt, entry_item, entry_quantity
+    global customer_details, entry_name, entry_receipt, entry_item, entry_quantity, total_entries
     input_check = 0
     Label(main_window, text="               ") .grid(column=2,row=0)
     Label(main_window, text="               ") .grid(column=2,row=1)
