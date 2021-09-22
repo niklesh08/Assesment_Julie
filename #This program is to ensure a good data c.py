@@ -40,7 +40,7 @@ def check_inputs ():
     Label(main_window, text="               ") .grid(column=2,row=3)
     #Check that Full Name is not blank, set error text if blank   
     if len(entry_name.get()) == 0 :
-        Label(main_window,fg="red", text="Required") .grid(column=2,row=0)
+        Label(main_window,fg="red", text="Sorry - this can't be blank, please enter your name") .grid(column=2,row=0)
         input_check = 1
     #Check that Receipt Number is not blank, set error text if blank     
     if len(entry_receipt.get()) == 0 :
