@@ -43,7 +43,7 @@ def append_details ():
     if len(re.findall(r'\w+', entry_name.get())) == 0:
         entry_name_blank.destroy()
         entry_name_first.destroy()
-        entry_name_blank = Label(main_window,fg="red", text="Sorry - this can't be blank, please enter your name")
+        entry_name_blank = Label(main_window,fg="red", text="Sorry - this can't be blank, please enter your Full Name")
         entry_name_blank.grid(row=4, column=2)
 
  #Check if only first name is entered in the full name entry           
@@ -64,7 +64,7 @@ def append_details ():
         entry_receipt_blank.destroy()
         entry_receipt_string.destroy()
         entry_receipt_special.destroy()
-        entry_receipt_blank = Label(main_window,fg="red", text="Required") .grid(column=5,row=4)
+        entry_receipt_blank = Label(main_window,fg="red", text="Sorry - this can't be blank, please enter the Receipt Number") .grid(column=5,row=4)
     
 #Check if there's a letter in the receipt number entry 
     if len(re.findall(r'\w+', entry_receipt.get())) != 0:  
@@ -72,14 +72,14 @@ def append_details ():
             entry_receipt_blank.destroy()
             entry_receipt_string.destroy()
             entry_receipt_special.destroy()
-            receipt_no_string = Label(main_window, text="A letter is entered. Enter the Receipt No. only", fg="red") .grid(row=4, column=5)
+            receipt_no_string = Label(main_window, text="A letter is entered. Enter the Receipt Number only", fg="red") .grid(row=4, column=5)
     
     if len(re.findall(r'\w+', entry_receipt.get())) != 0:     
         if entry_receipt.get().strip().isalnum() == False:
             entry_receipt_blank.destroy()
             entry_receipt_string.destroy()
             entry_receipt_special.destroy()
-            entry_receipt_string = Label(main_window, text="A special character or a space is entered. Enter the Receipt No. only", fg="red") .grid(row=4, column=5)
+            entry_receipt_string = Label(main_window, text="A special character or a space is entered. Enter the Receipt Number only", fg="red") .grid(row=4, column=5)
 
     if entry_receipt.get().strip().isdecimal() == True:
         entry_receipt_blank.destroy()
@@ -91,7 +91,7 @@ def append_details ():
  #Check that Item is not blank, set error text if blank     
     if len(re.findall(r'\w+', entry_item.get())) == 0:
         entry_item_blank.destroy()
-        Label(main_window,fg="red", text="Required") .grid(column=2,row=6)
+        Label(main_window,fg="red", text="Sorry - this can't be blank, please enter the Item that was hired") .grid(column=2,row=6)
      
     if len(re.findall(r'\w+', entry_item.get())) > 0:
         entry_item_blank.destroy()
@@ -101,7 +101,7 @@ def append_details ():
         entry_quantity_blank.destroy()
         entry_quantity_letter.destroy()
         entry_quantity_limit.destroy()
-        entry_quantity_blank = Label(main_window, text="*This can't be blank. Enter the Quantity", fg="red") .grid(row=6, column=5)
+        entry_quantity_blank = Label(main_window, text="Sorry - this can't be blank, please enter the number of item/s hired", fg="red") .grid(row=6, column=5)
 
 #check if quantity is blank 
     if len(re.findall(r'\w+', entry_quantity.get())) != 0:  
@@ -116,7 +116,7 @@ def append_details ():
                 entry_quantity_blank.destroy()
                 entry_quantity_letter.destroy()
                 entry_quantity_limit.destroy()
-                entry_quantity_limit = Label(main_window, text="Invalid value is entered. Enter a Quantity between 1 - 500", fg="red") .grid(row=6, column=5)
+                entry_quantity_limit = Label(main_window, text="Invalid value is entered. Please enter a number between 1 - 500", fg="red") .grid(row=6, column=5)
 
                 if 501 > int(entry_quantity.get()) > 0:
                     entry_quantity_blank.destroy()
@@ -180,7 +180,7 @@ def GUI():
     Button(main_window,text="Append Details",command=append_details) .grid(column=2,row=7,pady=(10,30), sticky=E)
     Button(main_window,text="Print Details",command=print_customer_details,width = 10) .grid(column=5,row=7,pady=(10,30), sticky=E)
 
-    Label(main_window, text="Item:") .grid(column=1,row=5,pady=10, sticky=E)
+    Label(main_window, text="Item Hired:") .grid(column=1,row=5,pady=10, sticky=E)
     entry_item = Entry(main_window)
     entry_item.grid(column=2,row=5)
 
