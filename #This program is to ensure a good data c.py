@@ -43,7 +43,7 @@ def append_details ():
     if len(re.findall(r'\w+', entry_name.get())) == 0:
         entry_name_blank.destroy()
         entry_name_first.destroy()
-        entry_name_blank = Label(main_window,fg="red", text="Sorry - this can't be blank, please enter your Full Name")
+        entry_name_blank = Label(main_window,fg="red", text="Sorry - this can't be blank, please enter the customers Full Name")
         entry_name_blank.grid(row=4, column=2)
 
  #Check if only first name is entered in the full name entry           
