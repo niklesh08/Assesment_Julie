@@ -128,6 +128,10 @@ def main():
     #create the GUI and start it up
     main_window =Tk()
     setup_buttons()
+
+    main_window.title("Data Collection Program")
+    
     main_window.mainloop()
+    
     
 main()
