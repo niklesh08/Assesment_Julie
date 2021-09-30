@@ -165,7 +165,7 @@ def delete_row ():
 def GUI():
 
     #these are the global variables that are used
-    global customer_details, entry_name, entry_name_first, entry_name_blank, entry_receipt, entry_receipt_string, entry_receipt_blank, entry_receipt_special, entry_item, entry_item_blank, entry_quantity, entry_quantity_blank, entry_quantity_limit, entry_quantity_letter, total_entries
+    global customer_details, entry_name, entry_name_first, entry_name_blank, entry_receipt, entry_receipt_string, entry_receipt_blank, entry_receipt_special, entry_item, entry_item_blank, entry_quantity, entry_quantity_blank, entry_quantity_limit, entry_quantity_letter, total_entries, delete_item
     #create all the empty and default labels, buttons and entry boxes. Put them in the correct grid location
 
     Label(main_window, text="Full Name:") .grid(column=1,row=3,pady=10, sticky=E)
