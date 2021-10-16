@@ -141,7 +141,6 @@ def append_details ():
                             entry_item.delete(0,'end')
                             entry_quantity.delete(0,'end')
                             total_entries +=  1
-                            print("hi")
 
 
 #delete a row from the list
