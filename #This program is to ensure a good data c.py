@@ -153,11 +153,11 @@ def delete_row ():
     total_entries -= 1
     delete_item.delete(0,'end')
     #clear the last item displayed on the GUI
-    Label(main_window, text="       ").grid(column=0,row=name_count+7) 
-    Label(main_window, text="       ").grid(column=1,row=name_count+7)
-    Label(main_window, text="       ").grid(column=2,row=name_count+7)
-    Label(main_window, text="       ").grid(column=3,row=name_count+7)
-    Label(main_window, text="       ").grid(column=4,row=name_count+7)
+    Label(main_window, text="                    ").grid(column=0,row=name_count+10) 
+    Label(main_window, text="                    ").grid(column=1,row=name_count+10)
+    Label(main_window, text="                    ").grid(column=2,row=name_count+10)
+    Label(main_window, text="                    ").grid(column=3,row=name_count+10)
+    Label(main_window, text="                    ").grid(column=4,row=name_count+10)
     #print all the items in the list
     print_customer_details()
 
